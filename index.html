@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Grid Warfare (10x10)</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- PyScript CDN -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+
+    <h1>CYBER GRID WARFARE</h1>
+    <div id="status">Lượt đi: Người chơi (Xanh) - Chọn một lá bài để đặt</div>
+
+    <!-- Bàn cờ 10x10 -->
+    <div id="board" class="board-container"></div>
+
+    <h3>Bài trên tay của bạn:</h3>
+    <div id="hand" class="hand-container"></div>
+
+    <!-- Cấu hình PyScript load các file Python cục bộ -->
+    <py-config>
+        [[files]]
+        paths = ["python/card.py", "python/player.py", "python/board.py", "python/ai.py", "python/main.py"]
+    </py-config>
+
+    <script type="py" src="python/main.py"></script>
+</body>
+</html>
